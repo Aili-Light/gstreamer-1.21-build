@@ -1,0 +1,10 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: fdk-aac
+Description: AAC codec library
+Version: 2.0.2
+Libs: -L${libdir} -lfdk_aac
+Libs.private: -lm
+Cflags: -I${includedir}

@@ -1,0 +1,10 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+exec_prefix=${prefix}
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include
+
+Name: microDNS
+Description: mDNS simple implementation
+Version: 0.1.2
+Libs: -L${libdir} -lmicrodns 
+Cflags: -I${includedir}

@@ -1,0 +1,8 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+
+Name: gstreamer-gl-egl-1.0
+Description: Streaming media framework, OpenGL plugins libraries (EGL specifics)
+Version: 1.21.0.1
+Requires: gstreamer-gl-1.0, egl
+Cflags: -I${includedir}/gstreamer-1.0

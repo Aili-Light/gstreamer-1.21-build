@@ -1,0 +1,13 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+modules=1
+
+Name: libXML
+Description: libXML library version2.
+Version: 2.9.7
+Requires.private: liblzma, zlib
+Libs: -L${libdir} -lxml2
+Libs.private: -lm -ldl -pthread
+Cflags: -I${includedir}/libxml2

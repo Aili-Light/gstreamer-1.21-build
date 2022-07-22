@@ -1,0 +1,11 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avutil
+Description: Multimedia utilities
+Version: 56.51.100
+Requires.private: libdrm >=  2.4.55
+Libs: -L${libdir} -lavutil
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

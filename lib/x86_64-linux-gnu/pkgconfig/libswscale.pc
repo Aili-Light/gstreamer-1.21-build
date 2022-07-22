@@ -1,0 +1,11 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: swscale
+Description: FFmpeg image rescaling library
+Version: 5.7.100
+Requires.private: libavutil, libdrm >=  2.4.55
+Libs: -L${libdir} -lswscale
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

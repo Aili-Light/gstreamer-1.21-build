@@ -1,0 +1,11 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avresample
+Description: Libav audio resampling library
+Version: 4.0.0
+Requires.private: libavutil, libdrm >=  2.4.55
+Libs: -L${libdir} -lavresample
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

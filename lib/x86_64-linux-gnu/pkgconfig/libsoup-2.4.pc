@@ -1,0 +1,14 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+exec_prefix=${prefix}
+
+Name: libsoup
+Description: A glib-based HTTP library
+Version: 2.74.0
+Requires: glib-2.0, gobject-2.0, gio-2.0
+Requires.private: gmodule-no-export-2.0, libxml-2.0, sqlite3, libpsl, liblzma, zlib
+Libs: -L${libdir} -lsoup-2.4
+Libs.private: -lm -ldl -pthread
+Cflags: -I${includedir}/libsoup-2.4

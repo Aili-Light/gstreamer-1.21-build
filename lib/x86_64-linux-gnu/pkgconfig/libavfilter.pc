@@ -1,0 +1,11 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avfilter
+Description: Audio/video filtering library
+Version: 7.85.100
+Requires.private: libavutil, libavcodec, libavformat, libswscale, libswresample, libdrm >=  2.4.55, libpostproc, fontconfig, opencv >=  3.0.0
+Libs: -L${libdir} -lavfilter
+Libs.private: -pthread -lm -ldl -lz -L${libdir} -lavresample
+Cflags: -I${includedir}

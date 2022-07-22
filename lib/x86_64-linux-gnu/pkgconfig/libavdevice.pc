@@ -1,0 +1,11 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avdevice
+Description: Media device handling
+Version: 58.10.100
+Requires.private: libavutil, libavformat, libavcodec, libswscale, libswresample, libdrm >=  2.4.55, libpostproc, fontconfig, opencv >=  3.0.0, xcb >= 1.10, xcb-shm, xcb-shape, xcb-xfixes, libdc1394-2 >=  2.2.5
+Libs: -L${libdir} -lavdevice
+Libs.private: -pthread -lm -lz -lGL -L${libdir} -lavfilter -ldl -lavresample
+Cflags: -I${includedir}

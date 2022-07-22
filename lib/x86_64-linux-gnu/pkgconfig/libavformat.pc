@@ -1,0 +1,11 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avformat
+Description: Multimedia formats
+Version: 58.76.100
+Requires.private: libavutil, libavcodec, libdrm >=  2.4.55
+Libs: -L${libdir} -lavformat
+Libs.private: -pthread -lm -lz
+Cflags: -I${includedir}

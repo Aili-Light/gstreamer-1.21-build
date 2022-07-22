@@ -1,0 +1,30 @@
+** how to install (Ubuntu 18.04)
+1. cd /usr/local
+2. sudo mkdir gstreamer-1.0
+3. sudo cp -r * /usr/local/gstreamer-1.0
+4. ls -l /usr/local/gstreamer-1.0, check output as :
+    bin/ include/ lib/ libexec/ share/
+5. vim ~/.bashrc , add lines :
+    export LD_LIBRARY_PATH=/usr/local/gstreamer-1.0/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
+    export GST_PLUGIN_PATH=/usr/local/gstreamer-1.0/lib/x86_64-linux-gnu/gstreamer-1.0/
+    alias sudo='sudo PATH="$PATH" LD_LIBRARY_PATH="$LD_LIBRARY_PATH" GST_PLUGIN_PATH="$GST_PLUGIN_PATH"'
+6. source ~/.bashrc, then check : 
+    echo $LD_LIBRARY_PATH
+    echo $GST_PLUGIN_PATH
+7. sudo vim /etc/ld.so.conf, add lines:
+    /usr/local/gstreamer-1.0/lib/x86_64-linux-gnu/
+8. sudo ldconfig
+9. cd /usr/bin, do :
+    sudo rm gst-*
+    sudo ln -s /usr/local/gstreamer-1.0/bin/gst-launch-1.0 gst-launch-1.0
+    sudo ln -s /usr/local/gstreamer-1.0/bin/gst-inspect-1.0 gst-inspect-1.0
+    sudo ln -s /usr/local/gstreamer-1.0/bin/gst-play-1.0 gst-play-1.0
+    sudo ln -s /usr/local/gstreamer-1.0/bin/gst-discoverer-1.0 gst-discoverer-1.0
+    sudo ln -s /usr/local/gstreamer-1.0/bin/gst-device-monitor-1.0 gst-device-monitor-1.0
+10. gst-launch-1.0 --version, you should see :
+    gst-launch-1.0 version 1.21.0
+    GStreamer 1.21.0 (GIT)
+    Unknown package origin
+11. (optional) if you see errors like : libdc1394.so.22 not found, simply do :
+    sudo apt-get install libdc1394-22-dev
+

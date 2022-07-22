@@ -1,0 +1,10 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: libopenjp2
+Description: JPEG2000 library (Part 1 and 2)
+Version: 2.3.1
+Libs: -L${libdir} -lopenjp2
+Libs.private: -lm -pthread
+Cflags: -I${includedir}

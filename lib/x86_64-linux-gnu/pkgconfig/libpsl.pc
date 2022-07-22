@@ -1,0 +1,10 @@
+prefix=/home/ailiteam/gstreamer-1-21-0
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: libpsl
+Description: Public Suffix List C library
+Version: 0.21.1
+Requires.private: icu-uc
+Libs: -L${libdir} -lpsl
+Cflags: -I${includedir}
